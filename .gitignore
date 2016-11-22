@@ -4,4 +4,6 @@
 !*.emacs
 !*.gitignore
 !/.emacs.d/
-!/.emacs.d/*
+!/.emacs.d/my-packages.el
+!/.emacs.d/my-noexternal.el
+!/.emacs.d/my-loadpackages.el
