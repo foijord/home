@@ -4,6 +4,7 @@
 !*.emacs
 !*.bashrc
 !*.gitignore
+!*.tmux.conf
 !/.emacs.d/
 !/.emacs.d/my-packages.el
 !/.emacs.d/my-noexternal.el
