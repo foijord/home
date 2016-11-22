@@ -3,6 +3,7 @@
 # But not these files
 !*.emacs
 !*.bashrc
+!*.inputrc
 !*.gitignore
 !*.tmux.conf
 !/.emacs.d/
