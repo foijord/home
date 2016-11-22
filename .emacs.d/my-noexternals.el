@@ -9,6 +9,9 @@
 ;; Put backup files in this location
 (setq backup-directory-alist '(("." . "~/.emacs.d/backup-files")))
 
+;; Reload changed files
+(global-auto-revert-mode t)
+
 ;; Global keybindings
 (global-set-key "\M-j" 'goto-line)
 
@@ -19,14 +22,14 @@
 
 (defun code-mode ()
   (setq truncate-lines t)
-  (setq c-basic-offset 2)
+  (setq c-basic-offset 4)
   (setq indent-tabs-mode nil))
 
 (defun code-mode()
   (interactive)
   (setq truncate-lines t)
-  (setq js-indent-level 2)
-  (setq c-basic-offset 2)
+  (setq js-indent-level 4)
+  (setq c-basic-offset 4)
   (setq indent-tabs-mode nil))
 
 (add-hook 'c-mode-hook 'code-mode)
