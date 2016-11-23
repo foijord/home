@@ -6,8 +6,8 @@
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
-;; Put backup files in this location
-(setq backup-directory-alist '(("." . "~/.emacs.d/backup-files")))
+;; Don't make backup files at all
+(setq make-backup-files nil)
 
 ;; Reload changed files
 (global-auto-revert-mode t)
