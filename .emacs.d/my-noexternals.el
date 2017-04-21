@@ -20,16 +20,11 @@
 (setq read-buffer-completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
 
-(defun code-mode ()
-  (setq truncate-lines t)
-  (setq c-basic-offset 4)
-  (setq indent-tabs-mode nil))
-
 (defun code-mode()
   (interactive)
   (setq truncate-lines t)
-  (setq js-indent-level 4)
-  (setq c-basic-offset 4)
+  (setq js-indent-level 2)
+  (setq c-basic-offset 2)
   (setq indent-tabs-mode nil))
 
 (add-hook 'c-mode-hook 'code-mode)

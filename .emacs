@@ -19,7 +19,7 @@
  '(custom-enabled-themes (quote (wombat)))
  '(package-selected-packages
    (quote
-    (web-mode exec-path-from-shell js2-mode json-mode json-reformat magit lua-mode flycheck))))
+    (markdown-mode web-mode exec-path-from-shell js2-mode json-mode json-reformat magit lua-mode flycheck))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
