@@ -1,6 +1,8 @@
 # Ignore everything
 *
 # But not these files
+!README
+!setup.sh
 !*.emacs
 !*.bashrc
 !*.inputrc
