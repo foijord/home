@@ -5,7 +5,15 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
 
-(defvar required-packages '(flycheck yaml-mode js2-mode json-mode web-mode) "a list of packages installed at launch.")
+(defvar required-packages '(flycheck
+			    yaml-mode
+			    js2-mode
+			    json-mode
+			    web-mode
+			    markdown-mode
+			    dockerfile-mode
+			    cmake-mode
+			    typescript-mode) "a list of packages installed at launch.")
 
 (require 'cl)
 ;; check if all packages are installed
