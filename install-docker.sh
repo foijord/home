@@ -32,14 +32,3 @@ sudo apt-get update
 # replaced.
 
 sudo apt-get install -y docker-ce
-
-# pull docker image from google container registry
-sudo gcloud docker -- pull us.gcr.io/vex-bed/remoteviz
-
-# run docker RemoteScene example from SlbRemoteViz
-sudo docker run us.gcr.io/vex-bed/remoteviz ./RemoteScene
-
-# install NVIDIA drivers
-sudo apt-add-repository -y ppa:graphics-drivers/ppa
-sudo apt-get update && apt-get install -y nvidia-375
-

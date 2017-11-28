@@ -5,6 +5,8 @@
 !setup.sh
 !install-google.sh
 !install-docker.sh
+!install-nvidia.sh
+!install-remviz.sh
 !*.emacs
 !*.bashrc
 !*.inputrc
