@@ -3,6 +3,8 @@
 # But not these files
 !README
 !setup.sh
+!install-google.sh
+!install-docker.sh
 !*.emacs
 !*.bashrc
 !*.inputrc
