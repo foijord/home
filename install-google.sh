@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 
-# install dependencies
-sudo apt-get install -y \
-     apt-transport-https \
-     ca-certificates \
-     curl \
-     software-properties-common
+sh install-common.sh
 
 # Install Google Cloud SDK:
 # Create an environment variable for the correct distribution:
