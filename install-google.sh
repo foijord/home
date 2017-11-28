@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-sh install-common.sh
-
 # Install Google Cloud SDK:
 # Create an environment variable for the correct distribution:
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"

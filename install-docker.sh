@@ -3,8 +3,6 @@
 # Installing Docker CE on ubuntu 16:04 VM
 # https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-using-the-repository
 
-sh install-common.sh
-
 # Add Docker’s official GPG key:
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
