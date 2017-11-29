@@ -11,7 +11,9 @@ sudo apt-get update && sudo apt-get install -y nvidia-375
 
 sudo apt-get install -y \
      xorg \
-     mesa-utils
+     mesa-utils \
+     xorg-x11-server-devel \
+     xserver-xorg-input-void
 
 # run in text mode (not graphical)
 echo 'manual' | sudo dd of=/etc/init/lightdm.override
