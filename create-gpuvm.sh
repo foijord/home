@@ -16,3 +16,6 @@ gcloud beta compute \
        --boot-disk-size "200" \
        --boot-disk-type "pd-standard" \
        --boot-disk-device-name "instance-1"
+
+# gcloud ssh command:
+# gcloud compute --project "vex-bed" ssh --zone "europe-west1-d" "remviz"
