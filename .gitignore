@@ -2,7 +2,6 @@
 *
 # But not these files
 !README
-!env-runtime.sh
 !create-gpuvm.sh
 !install-common.sh
 !install-google.sh

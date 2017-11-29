@@ -8,7 +8,7 @@ gcloud beta compute \
        --maintenance-policy "TERMINATE" \
        --service-account "vex-bed@appspot.gserviceaccount.com" \
        --scopes "https://www.googleapis.com/auth/cloud-platform" \
-       --accelerator type=nvidia-tesla-k80,count=1 \
+       --accelerator type=nvidia-tesla-p100,count=1 \
        --min-cpu-platform "Automatic" \
        --tags "http-server" \
        --image "ubuntu-1604-xenial-v20171121a" \
