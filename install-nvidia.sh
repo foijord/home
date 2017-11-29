@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# stop on error
+set -e
+
 # install NVIDIA drivers
 sudo apt-add-repository -y ppa:graphics-drivers/ppa
 sudo apt-get update && sudo apt-get install -y nvidia-375
@@ -23,5 +26,5 @@ sudo nvidia-xconfig -a --use-display-device=None --virtual=4096x2160
 # run only one X session:
 sudo xinit -- :0 -nolisten tcp vt8 -noreset +extension GLX +extension RANDR +extension RENDER +extension XFIXES &
 
-export DISPLAY=:0
-glxinfo | grep -i opengl
+# export DISPLAY=:0
+# glxinfo | grep -i opengl
