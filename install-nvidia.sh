@@ -5,7 +5,7 @@ set -e
 
 # install NVIDIA drivers
 sudo apt-add-repository -y ppa:graphics-drivers/ppa
-sudo apt-get update && sudo apt-get install -y nvidia-375
+sudo apt-get update && sudo apt-get install -y nvidia-387
 
 # install CUDA
 # curl -LO http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
