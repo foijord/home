@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# stop on error
-set -o errexit
-set -o pipefail
-
 # Install Google Cloud SDK:
 # Create an environment variable for the correct distribution:
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
