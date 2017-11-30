@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# stop on error
-set -o errexit
-set -o pipefail
-
 # run in text mode (not graphical)
 echo 'manual' | sudo dd of=/etc/init/lightdm.override
 sudo systemctl set-default multi-user.target
