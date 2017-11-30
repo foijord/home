@@ -3,6 +3,9 @@
 # But not these files
 !README
 !create-gpuvm.sh
+!init-gpuvm.sh
+!install-xstuff.sh
+!restart-xstuff.sh
 !install-common.sh
 !install-google.sh
 !install-docker.sh
