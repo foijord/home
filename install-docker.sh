@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# stop on error
+set -o errexit
+set -o pipefail
+
 # Installing Docker CE on ubuntu 16:04 VM
 # https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-using-the-repository
 

@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # stop on error
-set -e
+set -o errexit
+set -o pipefail
 
 # install NVIDIA drivers
 sudo apt-add-repository -y ppa:graphics-drivers/ppa
