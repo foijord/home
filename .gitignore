@@ -1,7 +1,7 @@
 # Ignore everything
 *
 # But not these files
-!README
+!README.md
 !create-gpuvm.sh
 !init-gpuvm.sh
 !install-xstuff.sh
