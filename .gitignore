@@ -2,15 +2,16 @@
 *
 # But not these files
 !README.md
-!create-gpuvm.sh
-!init-gpuvm.sh
-!install-xstuff.sh
-!restart-xstuff.sh
-!install-common.sh
-!install-google.sh
-!install-docker.sh
-!install-nvidia.sh
-!install-remviz.sh
+!/scripts/
+!/scripts/create-gpuvm.sh
+!/scripts/init-gpuvm.sh
+!/scripts/install-xstuff.sh
+!/scripts/restart-xstuff.sh
+!/scripts/install-common.sh
+!/scripts/install-google.sh
+!/scripts/install-docker.sh
+!/scripts/install-nvidia.sh
+!/scripts/install-remviz.sh
 !*.emacs
 !*.bashrc
 !*.inputrc
