@@ -15,19 +15,16 @@
 `export DOCKER_HOST=tcp://localhost:2375`
 
 ## build container
-`docker build -t remviz .`
+`sudo -E docker build -t remviz .`
 
 ## run RemoteScene example app locally
 `docker run remviz ./RemoteScene`
-
-## run docker container on VM
-`sudo docker run --privileged -it us.gcr.io/vex-bed/remviz /bin/bash`
 
 ## open interactive shell in container
 `docker run -it remviz /bin/bash`
 
 ## tag docker image
-`docker tag remviz us.gcr.io/vex-bed/remviz`
+`sudo -E docker tag remviz us.gcr.io/vex-bed/remviz`
 
 ## push docker image to google container registry (gcr)
 `sudo -E gcloud docker -- push us.gcr.io/vex-bed/remviz`
@@ -35,3 +32,5 @@
 ## pull docker image from google container registry
 `sudo gcloud docker -- pull us.gcr.io/vex-bed/remviz`
 
+## run docker container on VM
+`sudo docker run --privileged -it us.gcr.io/vex-bed/remviz /bin/bash`
