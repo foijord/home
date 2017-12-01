@@ -7,7 +7,7 @@ RUN set -o errexit
 ARG DEBIAN_FRONTEND=noninteractive
 
 # apt-add-repository dependency (used by install-nvidia.sh)
-apt-get update && apt-get install -y software-properties-common
+RUN apt-get update && apt-get install -y software-properties-common
 
 COPY scripts/install-xstuff.sh /scripts/
 COPY scripts/install-nvidia.sh /scripts/
