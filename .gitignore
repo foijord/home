@@ -2,6 +2,7 @@
 *
 # But not these files
 !README.md
+!Dockerfile
 !/scripts/
 !/scripts/create-gpuvm.sh
 !/scripts/init-gpuvm.sh
