@@ -25,11 +25,7 @@ echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a /e
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 
 # Update and install the Cloud SDK:
-apt-get update
-apt-get install -y google-cloud-sdk
-
-# Run gcloud init to get started:
-gcloud init
+apt-get update && apt-get install -y google-cloud-sdk
 
 
 echo "---------------------------------------------------"
@@ -54,13 +50,11 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 apt-get update && apt-get install -y docker-ce
 
 echo "---------------------------------------------------"
-echo "*** install nvidia driver                          "
+echo "*** pull remviz image from gcr                     "
 echo "---------------------------------------------------"
-./scripts/install-nvidia.sh
-
+sudo gcloud docker -- pull us.gcr.io/vex-bed/remviz
 
 echo "---------------------------------------------------"
-echo "*** install X server stuff                         "
+echo "*** start docker container                         "
 echo "---------------------------------------------------"
-#./scripts/install-xstuff.sh
-
+sudo docker run --privileged -it us.gcr.io/vex-bed/remviz /bin/bash
