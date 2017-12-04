@@ -7,11 +7,11 @@ set -o pipefail
 echo "---------------------------------------------------"
 echo "*** install dependencies                           "
 echo "---------------------------------------------------"
-apt-get update && apt-get install -y \
-			  apt-transport-https \
-			  ca-certificates \
-			  curl \
-			  software-properties-common
+#apt-get update && apt-get install -y \
+#			  apt-transport-https \
+#			  ca-certificates \
+#			  curl \
+#			  software-properties-common
 
 echo "---------------------------------------------------"
 echo "*** install gcloud                                 "
@@ -48,6 +48,11 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 # Install the latest version of Docker CE. Any existing installation
 # of Docker is replaced.
 apt-get update && apt-get install -y docker-ce
+
+echo "---------------------------------------------------"
+echo "*** install nvidia driver                          "
+echo "---------------------------------------------------"
+sudo ./install-nvidia.sh
 
 echo "---------------------------------------------------"
 echo "*** pull remviz image from gcr                     "
