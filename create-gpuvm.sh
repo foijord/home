@@ -22,4 +22,4 @@ gcloud beta compute \
        --boot-disk-device-name "$1"
 
 # gcloud ssh command:
-gcloud compute --project "vex-bed" ssh --zone "europe-west1-d" "$1"
+# gcloud compute --project "vex-bed" ssh --zone "europe-west1-d" "$1"

@@ -7,19 +7,19 @@ RUN set -o errexit
 ARG DEBIAN_FRONTEND=noninteractive
 
 # apt-add-repository dependency (used by install-nvidia.sh)
-RUN apt-get update && apt-get install -y software-properties-common
+RUN apt-get update && apt-get install -y \
+    xorg \
+    mesa-utils \
+    libglu1-mesa \
+    libossp-uuid16 \
+    xserver-xorg-dev \
+    software-properties-common
 
-COPY scripts/install-xstuff.sh /scripts/
 COPY scripts/install-nvidia.sh /scripts/
 COPY scripts/execute-remviz.sh /scripts/
 
 WORKDIR /scripts/
-
 RUN ./install-nvidia.sh
-RUN ./install-xstuff.sh
-
-# libossp-uuid16 needed by SlbRemoteViz
-RUN apt-get install -y libossp-uuid16
 
 # ADD unpacks the archive automatically
 ADD SlbRemoteViz.linux_package_4.build_73998.tar.gz /

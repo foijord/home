@@ -5,15 +5,6 @@ set -o errexit
 set -o pipefail
 
 echo "---------------------------------------------------"
-echo "*** install dependencies                           "
-echo "---------------------------------------------------"
-#apt-get update && apt-get install -y \
-#			  apt-transport-https \
-#			  ca-certificates \
-#			  curl \
-#			  software-properties-common
-
-echo "---------------------------------------------------"
 echo "*** install gcloud                                 "
 echo "---------------------------------------------------"
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
@@ -26,7 +17,6 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 
 # Update and install the Cloud SDK:
 apt-get update && apt-get install -y google-cloud-sdk
-
 
 echo "---------------------------------------------------"
 echo "*** install docker                                 "
@@ -42,7 +32,6 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 # the edge or test repositories as well. To add the edge or test
 # repository, add the word edge or test (or both) after the word stable
 # in the commands below.
-
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
 # Install the latest version of Docker CE. Any existing installation
