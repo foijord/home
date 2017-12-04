@@ -41,18 +41,16 @@ apt-get update && apt-get install -y docker-ce
 echo "---------------------------------------------------"
 echo "*** install nvidia driver                          "
 echo "---------------------------------------------------"
-
-# install NVIDIA drivers
-apt-add-repository -y ppa:graphics-drivers/ppa
-apt-get update && apt-get install -y nvidia-387
-# nvidia-xconfig -a --use-display-device=None --virtual=4096x2160
+# this produces a warning about package xorg-server not found since X
+# is not installed on the VM. But the docker container still runs.
+./install-nvidia.sh
 
 echo "---------------------------------------------------"
 echo "*** pull remviz image from gcr                     "
 echo "---------------------------------------------------"
-sudo gcloud docker -- pull us.gcr.io/vex-bed/remviz
+gcloud docker -- pull us.gcr.io/vex-bed/remviz
 
 echo "---------------------------------------------------"
 echo "*** start docker container                         "
 echo "---------------------------------------------------"
-sudo docker run --privileged -it us.gcr.io/vex-bed/remviz /bin/bash
+docker run --privileged -it us.gcr.io/vex-bed/remviz /bin/bash
