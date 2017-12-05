@@ -8,8 +8,8 @@
 
 !/container/
 !/container/Dockerfile
-!/container/clean.sh
 !/container/entrypoint.sh
+!/container/build-image.sh
 
 !*.emacs
 !*.bashrc

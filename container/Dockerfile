@@ -5,6 +5,7 @@ RUN set -o errexit
 
 # disable any user interaction during the build
 ARG DEBIAN_FRONTEND=noninteractive
+ARG REMOTEVIZ
 
 RUN apt-get update && apt-get install -y \
     xorg \
@@ -20,7 +21,7 @@ RUN apt-get update && apt-get install -y nvidia-387
 RUN nvidia-xconfig -a --use-display-device=None --virtual=4096x2160
 
 # ADD unpacks the archive automatically
-ADD SlbRemoteViz.linux_package_4.build_73998.tar.gz /
+ADD $REMOTEVIZ /
 
 # change working directory to directory containing executables
 WORKDIR /SlbRemoteViz/bin
