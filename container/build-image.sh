@@ -3,10 +3,11 @@
 echo "---------------------------------------------------"
 echo "*** fetch SlbRemoteViz from bucket                 "
 echo "---------------------------------------------------"
-#REMOTEVIZ_VERSION=gs://slb-cloud-3d-viz/SlbRemoteViz/Linux/pkg_5/SlbRemoteViz.linux_package_5.build_79788.tar.gz
+REMOTEVIZ_PATH=gs://slb-cloud-3d-viz/SlbRemoteViz/Linux/pkg_5
+REMOTEVIZ_BUILD=SlbRemoteViz.linux_package_5.build_79788.tar.gz
 
-REMOTEVIZ_PATH=gs://slb-cloud-3d-viz/SlbRemoteViz/Linux/pkg_4
-REMOTEVIZ_BUILD=SlbRemoteViz.linux_package_4.build_73998.tar.gz
+# REMOTEVIZ_PATH=gs://slb-cloud-3d-viz/SlbRemoteViz/Linux/pkg_4
+# REMOTEVIZ_BUILD=SlbRemoteViz.linux_package_4.build_73998.tar.gz
 
 gsutil cp $REMOTEVIZ_PATH/$REMOTEVIZ_BUILD .
 
