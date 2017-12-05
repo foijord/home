@@ -41,9 +41,9 @@ apt-get update && apt-get install -y docker-ce
 echo "---------------------------------------------------"
 echo "*** install nvidia driver                          "
 echo "---------------------------------------------------"
-# this produces a warning about package xorg-server not found since X
-# is not installed on the VM. But the docker container still runs.
-./install-nvidia.sh
+apt-add-repository -y ppa:graphics-drivers/ppa
+apt-get update && apt-get install -y nvidia-387
+nvidia-xconfig -a --use-display-device=None --virtual=4096x2160
 
 echo "---------------------------------------------------"
 echo "*** pull remviz image from gcr                     "

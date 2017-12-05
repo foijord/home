@@ -34,3 +34,7 @@
 
 ## run docker container on VM
 `sudo docker run --privileged -it us.gcr.io/vex-bed/remviz /bin/bash`
+
+## create deployment in hostvm folder:
+`gcloud deployment-manager deployments create hostvm-deployment --config hostvm.yaml`
+`gcloud deployment-manager deployments update hostvm-deployment --config hostvm.yaml`

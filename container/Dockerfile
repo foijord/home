@@ -6,7 +6,6 @@ RUN set -o errexit
 # disable any user interaction during the build
 ARG DEBIAN_FRONTEND=noninteractive
 
-# apt-add-repository dependency (used by install-nvidia.sh)
 RUN apt-get update && apt-get install -y \
     xorg \
     mesa-utils \
@@ -15,11 +14,10 @@ RUN apt-get update && apt-get install -y \
     xserver-xorg-dev \
     software-properties-common
 
-COPY scripts/install-nvidia.sh /scripts/
-COPY scripts/execute-remviz.sh /scripts/
-
-WORKDIR /scripts/
-RUN ./install-nvidia.sh
+# install NVIDIA driver
+RUN apt-add-repository -y ppa:graphics-drivers/ppa
+RUN apt-get update && apt-get install -y nvidia-387
+RUN nvidia-xconfig -a --use-display-device=None --virtual=4096x2160
 
 # ADD unpacks the archive automatically
 ADD SlbRemoteViz.linux_package_4.build_73998.tar.gz /
@@ -38,4 +36,5 @@ ENV DISPLAY=:0
 EXPOSE 8080
 # stuff that must be executed after the container is started,
 # i.e. configure and start the X server
-ENTRYPOINT ["/scripts/execute-remviz.sh"]
+COPY entrypoint.sh /scripts/
+ENTRYPOINT ["/scripts/entrypoint.sh"]

@@ -2,15 +2,15 @@
 *
 # But not these files
 !README.md
-!Dockerfile
-!create-gpuvm.sh
-!/scripts/
-!/scripts/execute-remviz.sh
-!/scripts/install-docker.sh
-!/scripts/install-google.sh
-!/scripts/install-hostvm.sh
-!/scripts/install-xstuff.sh
-!/scripts/install-nvidia.sh
+!create-hostvm.sh
+!deploy-hostvm.sh
+!deploy-hostvm.yaml
+
+!/container/
+!/container/Dockerfile
+!/container/clean.sh
+!/container/entrypoint.sh
+
 !*.emacs
 !*.bashrc
 !*.inputrc
