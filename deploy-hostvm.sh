@@ -53,4 +53,4 @@ gcloud docker -- pull us.gcr.io/vex-bed/remviz
 echo "---------------------------------------------------"
 echo "*** start docker container                         "
 echo "---------------------------------------------------"
-docker run --privileged -it us.gcr.io/vex-bed/remviz ./RemoteScene
+docker run --privileged --publish 8080:8080 us.gcr.io/vex-bed/remviz ./RemoteScene
