@@ -53,4 +53,4 @@ gcloud docker -- pull us.gcr.io/vex-bed/remviz
 echo "---------------------------------------------------"
 echo "*** start docker container                         "
 echo "---------------------------------------------------"
-docker run --privileged -it us.gcr.io/vex-bed/remviz /bin/bash
+docker run --privileged -it us.gcr.io/vex-bed/remviz ./RemoteScene

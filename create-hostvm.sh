@@ -19,7 +19,6 @@ gcloud beta compute \
        --image-project "ubuntu-os-cloud" \
        --boot-disk-size "200" \
        --boot-disk-type "pd-standard" \
-       --metadata-from-file startup-script=scripts/install-hostvm.sh \
        --boot-disk-device-name "$1"
 
 # gcloud ssh command:
