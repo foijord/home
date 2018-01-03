@@ -1,6 +1,16 @@
 # Ignore everything
 *
 # But not these files
+!README.md
+!create-hostvm.sh
+!deploy-hostvm.sh
+!deploy-hostvm.yaml
+
+!/container/
+!/container/Dockerfile
+!/container/entrypoint.sh
+!/container/build-image.sh
+
 !*.emacs
 !*.bashrc
 !*.inputrc
