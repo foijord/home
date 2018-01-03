@@ -15,6 +15,8 @@
 ;; Global keybindings
 (global-set-key "\M-j" 'goto-line)
 
+(load-theme 'wombat t)
+
 ;; Ignore case for filename completion
 (setq isearch-case-fold-search t)
 (setq read-buffer-completion-ignore-case t)
