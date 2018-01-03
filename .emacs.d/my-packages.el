@@ -10,7 +10,6 @@
 			    js2-mode
 			    json-mode
 			    web-mode
-			    markdown-mode
 			    dockerfile-mode
 			    cmake-mode
 			    typescript-mode) "a list of packages installed at launch.")
