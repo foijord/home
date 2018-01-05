@@ -7,6 +7,7 @@
 
 (defvar required-packages '(flycheck
 			    yaml-mode
+			    markdown-mode
 			    js2-mode
 			    json-mode
 			    web-mode
